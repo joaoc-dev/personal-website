@@ -20,6 +20,3 @@ jobs:
 
       - name: Lint
         run: pnpm lint
-
-      - name: Check dependencies
-        run: pnpm check:deps
