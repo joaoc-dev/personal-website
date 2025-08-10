@@ -5,15 +5,34 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
+
     "moduleResolution": "bundler",
     "paths": {
       "@/*": ["./*"]
     },
     "resolveJsonModule": true,
     "allowJs": true,
+
     "strict": true,
+    "strictNullChecks": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "useUnknownInCatchVariables": true,
+
     "noEmit": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
     "isolatedModules": true,
     "skipLibCheck": true,
     "plugins": [
@@ -22,6 +41,14 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+
+  "exclude": [
+    "node_modules"
+  ]
 }
