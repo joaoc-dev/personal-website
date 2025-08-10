@@ -7,14 +7,10 @@ import * as React from 'react';
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
-  const handleThemeToggle = () => {
-    console.warn('theme', theme);
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
   return (
     <button
       type="button"
-      onClick={handleThemeToggle}
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className="icon-button"
     >
       <Sun className="h-6 w-6 rotate-0 scale-100 transition-all duration-500 dark:-rotate-90 dark:scale-0" />

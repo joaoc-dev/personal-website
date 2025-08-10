@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Montserrat } from 'next/font/google';
+import NavBar from '@/components/layout/nav-bar';
 import ParticlesBackground from '@/components/shared/particles-background';
 import { ThemeProvider } from '@/components/ui/theme-provider';
 import './globals.css';
@@ -12,6 +13,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+const montserrat = Montserrat({
+  variable: '--font-montserrat',
   subsets: ['latin'],
 });
 
@@ -28,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -36,6 +42,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="max-w-screen-xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen">
+            <header>
+              <NavBar />
+            </header>
+            <main>{children}</main>
+            <footer className="text-center text-sm py-4 mt-8">
+              &copy; João Carvalho 2025
+            </footer>
+          </div>
           {children}
           <ParticlesBackground />
         </ThemeProvider>
