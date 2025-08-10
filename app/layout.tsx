@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { Geist, Geist_Mono, Montserrat } from 'next/font/google';
-import NavBar from '@/components/layout/nav-bar';
+import NavBar from '@/components/layout/nav-bar/nav-bar';
 import ParticlesBackground from '@/components/shared/particles-background';
-import { ThemeProvider } from '@/components/ui/theme-provider';
+import { ThemeProvider } from '@/components/theme/theme-provider';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import './globals.css';
 
 const geistSans = Geist({
@@ -42,16 +43,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-screen-xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen">
-            <header>
-              <NavBar />
-            </header>
-            <main>{children}</main>
-            <footer className="text-center text-sm py-4 mt-8">
-              &copy; João Carvalho 2025
-            </footer>
-          </div>
-          {children}
+          <TooltipProvider skipDelayDuration={300}>
+            <div className="max-w-screen-xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen">
+              <header>
+                <NavBar />
+              </header>
+              <main className="max-w-screen-md mx-auto mt-10">{children}</main>
+              <footer className="text-center text-sm py-4 mt-8">
+                &copy; João Carvalho 2025
+              </footer>
+            </div>
+          </TooltipProvider>
           <ParticlesBackground />
         </ThemeProvider>
         <Analytics />
