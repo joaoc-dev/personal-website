@@ -39,8 +39,8 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <TooltipProvider skipDelayDuration={300}>
@@ -48,8 +48,8 @@ export default function RootLayout({
               <header>
                 <NavBar />
               </header>
-              <main className="max-w-screen-md mx-auto mt-10">{children}</main>
-              <footer className="text-center text-sm py-4 mt-8">
+              <main className="max-w-screen-md w-full mx-auto mt-10 px-8">{children}</main>
+              <footer className="text-center font-sans text-xs sm:text-sm text-muted-foreground py-4 mt-8">
                 &copy; João Carvalho 2025
               </footer>
             </div>
