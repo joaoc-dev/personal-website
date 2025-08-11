@@ -4,7 +4,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from '@/components/ui/tooltip';
+} from '@/components/ui-modified/tooltip';
 
 interface NavLinkProps {
   href: string;
@@ -20,7 +20,7 @@ function NavLink({ href, label, children }: NavLinkProps) {
           {children}
         </Link>
       </TooltipTrigger>
-      <TooltipContent side="top" sideOffset={20}>
+      <TooltipContent side="top" sideOffset={20} showArrow={false} className="rounded-xs">
         {label}
       </TooltipContent>
     </Tooltip>
