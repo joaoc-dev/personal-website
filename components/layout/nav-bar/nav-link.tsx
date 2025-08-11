@@ -10,15 +10,24 @@ interface NavLinkProps {
   href: string;
   label: string;
   children: React.ReactNode;
+  isExternal?: boolean;
 }
 
-function NavLink({ href, label, children }: NavLinkProps) {
+function NavLink({ href, label, children, isExternal }: NavLinkProps) {
   return (
     <Tooltip delayDuration={700}>
       <TooltipTrigger asChild>
-        <Link href={href} aria-label={label} className="nav-link">
-          {children}
-        </Link>
+        {isExternal
+          ? (
+              <a href={href} aria-label={label} className="nav-link" target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
+            )
+          : (
+              <Link href={href} aria-label={label} className="nav-link">
+                {children}
+              </Link>
+            )}
       </TooltipTrigger>
       <TooltipContent
         side="top"

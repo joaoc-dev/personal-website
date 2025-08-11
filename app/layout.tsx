@@ -44,12 +44,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider skipDelayDuration={300} disableHoverableContent={true}>
-            <div className="max-w-screen-xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen">
+            <div className="max-w-screen-2xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen ">
               <header>
                 <NavBar />
               </header>
-              <main className="max-w-screen-md w-full mx-auto mt-10 px-8">{children}</main>
-              <footer className="text-center font-sans text-xs sm:text-sm text-muted-foreground py-4 mt-8">
+              <main className="px-8 mt-4 md:mt-10">{children}</main>
+              <footer className="text-center font-sans text-xs sm:text-sm text-muted-foreground py-4 mt-8 mb-6">
                 &copy; João Carvalho 2025
               </footer>
             </div>

@@ -46,7 +46,7 @@
 
 @layer base {
   body {
-    @apply text-foreground font-mono text-sm leading-6;
+    @apply font-mono text-sm leading-6;
   }
 
   h1 {
@@ -65,6 +65,10 @@
 
   .nav-link-icon {
     @apply w-5 h-5 hover:scale-110 transition-transform duration-300 ease-in-out;
+  }
+
+  .text-link {
+    @apply underline underline-offset-3 decoration-primary/40 hover:decoration-primary/100 transition-all duration-300 ease-in-out;
   }
 }
 

@@ -1,4 +1,4 @@
-import { Github } from 'lucide-react';
+import { Github, Presentation } from 'lucide-react';
 import React from 'react';
 import { ThemeToggle } from '../../theme/theme-toggle';
 import NavLink from './nav-link';
@@ -7,12 +7,17 @@ function NavBar() {
   return (
     <nav className="flex justify-between items-center py-8 px-4">
       <NavLink href="/" label="João Carvalho">
-        <span className="nav-link-logo">JC</span>
+        <p className="nav-link-logo">JC</p>
       </NavLink>
       <div className="flex items-center gap-4">
-        <ul>
+        <ul className="flex items-center gap-4">
           <li>
-            <NavLink href="https://github.com/joaoc-dev" label="Github">
+            <NavLink href="/demos" label="Demos">
+              <Presentation className="nav-link-icon" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink href="https://github.com/joaoc-dev" label="Github" isExternal>
               <Github className="nav-link-icon" />
             </NavLink>
           </li>
