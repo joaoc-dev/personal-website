@@ -14,6 +14,11 @@ export default antfu({
   formatters: {
     css: true,
   },
+
+  ignores: [
+    'components/ui/**',
+    'components/ui-modified/**',
+  ],
 }, {
   rules: {
     'node/prefer-global/process': 'off', // Allow using `process.env`
