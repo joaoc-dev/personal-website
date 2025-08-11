@@ -43,7 +43,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <TooltipProvider skipDelayDuration={300}>
+          <TooltipProvider skipDelayDuration={300} disableHoverableContent={true}>
             <div className="max-w-screen-xl mx-auto grid grid-rows-[auto_1fr_auto] min-h-screen">
               <header>
                 <NavBar />
