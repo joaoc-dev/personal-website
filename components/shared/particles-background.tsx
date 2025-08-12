@@ -1,14 +1,9 @@
 'use client';
 
 import type { ISourceOptions } from '@tsparticles/engine';
-import {
-
-  MoveDirection,
-  OutMode,
-} from '@tsparticles/engine';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { MoveDirection, OutMode } from '@tsparticles/engine';
 import { useTheme } from 'next-themes';
+import dynamic from 'next/dynamic';
 import { useEffect, useMemo, useState } from 'react';
 
 function ParticleBackground() {
@@ -17,11 +12,21 @@ function ParticleBackground() {
 
   // this should be run only once per application lifetime
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    let mounted = true;
+    (async () => {
+      const [{ initParticlesEngine }, { loadSlim }] = await Promise.all([
+        import('@tsparticles/react'),
+        import('@tsparticles/slim'),
+      ]);
+      await initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      });
+      if (mounted)
+        setInit(true);
+    })();
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   const options: ISourceOptions = useMemo(
@@ -75,18 +80,15 @@ function ParticleBackground() {
     [resolvedTheme],
   );
 
-  if (init) {
-    return (
-      <div className="fixed inset-0 -z-10 pointer-events-none">
-        <Particles
-          id="tsparticles"
-          options={options}
-        />
-      </div>
-    );
-  }
+  if (!init)
+    return null;
 
-  return <></>;
+  const LazyParticles = dynamic(() => import('@tsparticles/react').then(m => m.default), { ssr: false });
+  return (
+    <div className="fixed inset-0 -z-10 pointer-events-none">
+      <LazyParticles id="tsparticles" options={options} />
+    </div>
+  );
 }
 
 export default ParticleBackground;

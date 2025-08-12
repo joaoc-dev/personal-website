@@ -11,6 +11,12 @@ interface ProjectMediaProps {
 export function ProjectMedia({ project, isActive }: ProjectMediaProps) {
   const [isReady, setIsReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const screenshotSrc = project.screenshot.startsWith('/')
+    ? project.screenshot
+    : `/${project.screenshot}`;
+  const videoSrc = project.video.startsWith('/')
+    ? project.video
+    : `/${project.video}`;
 
   useEffect(() => {
     if (!isActive || !videoRef.current)
@@ -25,7 +31,7 @@ export function ProjectMedia({ project, isActive }: ProjectMediaProps) {
       {project.screenshot
         ? (
             <Image
-              src={project.screenshot}
+              src={screenshotSrc}
               alt={`${project.title} screenshot`}
               fill
               className="object-cover"
@@ -48,11 +54,11 @@ export function ProjectMedia({ project, isActive }: ProjectMediaProps) {
           muted
           playsInline
           aria-hidden
-          poster={project.screenshot}
+          poster={screenshotSrc}
           key={project.id}
           onLoadedData={() => setIsReady(true)}
         >
-          <source src={project.video} type="video/mp4" />
+          <source src={videoSrc} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       )}

@@ -48,10 +48,6 @@
   body {
     @apply font-mono text-sm leading-6;
   }
-
-  h1 {
-    @apply text-xl font-bold;
-  }
 }
 
 @layer components {

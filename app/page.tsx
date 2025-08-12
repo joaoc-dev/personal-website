@@ -1,8 +1,15 @@
+import type { Metadata } from 'next';
 import AboutMe from '@/components/home/about-me';
 import GetInTouch from '@/components/home/get-in-touch';
 import HowIWork from '@/components/home/how-i-work';
 import Introduction from '@/components/home/introduction';
 import WhatIBuild from '@/components/home/what-i-build';
+
+export const metadata: Metadata = {
+  title: 'Full Stack Developer Portfolio',
+  description: 'João Carvalho — full-stack developer crafting scalable, maintainable web apps.',
+  alternates: { canonical: '/' },
+};
 
 export default function HomePage() {
   return (
