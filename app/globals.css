@@ -68,7 +68,7 @@
   }
 
   .text-link {
-    @apply underline underline-offset-3 decoration-primary/40 hover:decoration-primary/100 transition-all duration-300 ease-in-out;
+    @apply underline underline-offset-4 decoration-primary/40 hover:decoration-primary/100 transition-all duration-300 ease-in-out;
   }
 }
 
