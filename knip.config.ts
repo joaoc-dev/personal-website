@@ -3,6 +3,7 @@ import type { KnipConfig } from 'knip';
 const config: KnipConfig = {
   ignore: [
     'components/ui/**',
+    'components/ui-modified/**',
   ],
   ignoreDependencies: [
   ],

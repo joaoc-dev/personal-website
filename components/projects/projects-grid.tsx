@@ -6,7 +6,7 @@ import { useIsClient } from 'usehooks-ts';
 import ProjectCard from '@/components/projects/project-card';
 import { useBreakpointColumns } from '@/lib/hooks/useBreakpointColumns';
 
-export function ProjectsGrid({ projects }: { projects: Project[] }) {
+function ProjectsGrid({ projects }: { projects: Project[] }) {
   const { columns } = useBreakpointColumns();
 
   const isClient = useIsClient();

@@ -18,5 +18,3 @@ export function useBreakpointColumns(): {
   const columns = isXlUp ? 3 : isLgUp ? 2 : 1;
   return { isLgUp, isXlUp, columns };
 }
-
-export default useBreakpointColumns;

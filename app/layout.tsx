@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { Geist, Geist_Mono, Montserrat } from 'next/font/google';
-import NavBar from '@/components/layout/nav-bar/nav-bar';
+import NavBar from '@/components/layout/nav-bar';
 import ParticlesBackground from '@/components/shared/particles-background';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { TooltipProvider } from '@/components/ui/tooltip';
