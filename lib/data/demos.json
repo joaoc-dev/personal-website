@@ -1,0 +1,60 @@
+{
+  "possibleTags": [
+    "Next.js",
+    "Tailwind",
+    "MongoDB",
+    "Shadcn",
+    "TypeScript",
+    "NextAuth",
+    "Zod",
+    "React Hook Form",
+    "React Email",
+    "Resend",
+    "Supabase",
+    "Rate limiting",
+    "Tanstack Query",
+    "Tanstack Table",
+    "Tanstack Virtual",
+    "Dnd Kit",
+    "Motion",
+    "Pusher",
+    "Cloudinary",
+    "Docker",
+    "Node.js",
+    "Axiom",
+    "PostHog",
+    "Sentry",
+    "Express",
+    "PostgreSQL",
+    "Prisma",
+    "Stripe",
+    ".NET",
+    "C#",
+    "EF Core",
+    "MySQL",
+    "SQLServer",
+    "Vitest",
+    "Vitest Browser",
+    "Storybook",
+    "Blazor",
+    "GitHub Actions"
+  ],
+  "projects": [
+    {
+      "id": "001",
+      "video": "/001.mp4",
+      "screenshot": "/001.png",
+      "title": "Personal website",
+      "description": "The website you're currently on!",
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "Shadcn",
+        "TypeScript",
+        "GitHub Actions"
+      ],
+      "liveLink": "https://www.joao-carvalho.com/",
+      "github": "https://github.com/joaoc-dev/personal-website"
+    }
+  ]
+}
