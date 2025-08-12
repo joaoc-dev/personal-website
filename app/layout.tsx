@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Geist, Geist_Mono, Montserrat } from 'next/font/google';
 import NavBar from '@/components/layout/nav-bar';
 import DynamicParticlesBackgroundWrapper from '@/components/shared/dynamic-particles-background-wrapper';
@@ -105,6 +106,7 @@ export default function RootLayout({
           <DynamicParticlesBackgroundWrapper />
         </ThemeProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
