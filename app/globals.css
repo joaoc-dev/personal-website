@@ -45,6 +45,9 @@
 }
 
 @layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
   body {
     @apply font-mono text-sm leading-6;
   }
