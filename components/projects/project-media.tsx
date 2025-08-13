@@ -35,7 +35,7 @@ export function ProjectMedia({ project, isActive }: ProjectMediaProps) {
               alt={`${project.title} screenshot`}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+              sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           )
         : (
