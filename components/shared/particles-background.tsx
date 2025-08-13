@@ -41,37 +41,35 @@ function ParticleBackground() {
         color: {
           value: resolvedTheme === 'dark' ? '#ffffff' : '#0b0b0b',
         },
-        links: {
-          color: resolvedTheme === 'dark' ? '#ffffff' : '#0b0b0b',
-          distance: 90,
-          enable: true,
-          opacity: 0.1,
-          width: 1,
-        },
         move: {
-          direction: MoveDirection.none,
+          direction: MoveDirection.top,
           enable: true,
           outModes: {
             default: OutMode.out,
           },
           random: false,
-          speed: 0.8,
-          straight: false,
+          speed: 0.2,
+          straight: true,
         },
         number: {
           density: {
             enable: true,
           },
-          value: 120,
+          value: 180,
         },
         opacity: {
           value: { min: 0.1, max: 0.3 },
+          animation: {
+            enable: true,
+            speed: 0.5,
+            sync: false,
+          },
         },
         shape: {
           type: 'circle',
         },
         size: {
-          value: { min: 0.5, max: 2 },
+          value: { min: 1, max: 2 },
         },
       },
       detectRetina: true,
