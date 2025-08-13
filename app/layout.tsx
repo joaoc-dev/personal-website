@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description: 'Portfolio website of full stack developer João Carvalho.',
     images: [
       {
-        url: '/001.png',
+        url: `${siteUrl}/001.png`,
         width: 1200,
         height: 630,
         alt: 'João Carvalho',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'João Carvalho',
     description: 'Portfolio website of full stack developer João Carvalho.',
-    images: ['/001.png'],
+    images: [`${siteUrl}/001.png`],
   },
   robots: {
     index: true,
