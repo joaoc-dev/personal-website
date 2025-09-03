@@ -27,14 +27,15 @@ export function ProjectMedia({ project, isActive }: ProjectMediaProps) {
   }, [isActive]);
 
   return (
-    <div className="relative w-full aspect-video border-b border-foreground/5 overflow-hidden rounded-t-xs">
+    <div className="relative w-full overflow-hidden border-b border-base">
       {project.screenshot
         ? (
             <Image
               src={screenshotSrc}
               alt={`${project.title} screenshot`}
-              fill
-              className="object-cover"
+              width={1920}
+              height={1080}
+              className="w-full h-auto"
               sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 33vw"
             />
           )
@@ -46,7 +47,7 @@ export function ProjectMedia({ project, isActive }: ProjectMediaProps) {
         <video
           ref={videoRef}
           className={cn(
-            'absolute inset-0 h-full w-full object-cover transition-opacity duration-200',
+            'absolute inset-0 w-full h-full object-cover transition-opacity duration-200 z-10',
             isReady ? 'opacity-100' : 'opacity-0',
           )}
           preload="metadata"
