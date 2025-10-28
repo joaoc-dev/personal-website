@@ -11,7 +11,7 @@ interface TextScrambleProps {
 }
 
 export default function TextScramble({ text, className, delay = 0 }: TextScrambleProps) {
-  const { ref, replay } = useScramble({ text, scramble: 15, tick: 2, speed: 0.9, playOnMount: false });
+  const { ref, replay } = useScramble({ text, scramble: 15, tick: 2, speed: 1.3, playOnMount: false });
   const prefersReducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
 
   useEffect(() => {

@@ -15,19 +15,19 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-12 max-w-screen-md w-full mx-auto ">
       <section>
-        <Introduction delay={100} />
+        <Introduction delay={70} />
       </section>
       <section>
-        <WhatIBuild delay={600} />
+        <WhatIBuild delay={250} />
       </section>
       <section>
-        <HowIWork delay={2200} />
+        <HowIWork delay={1200} />
       </section>
       <section>
-        <AboutMe delay={3400} />
+        <AboutMe delay={2350} />
       </section>
       <section>
-        <GetInTouch delay={4800} />
+        <GetInTouch delay={3500} />
       </section>
     </div>
   );

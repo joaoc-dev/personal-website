@@ -1,5 +1,4 @@
 import { CircleSmall } from 'lucide-react';
-import React from 'react';
 import FadeInContent from '@/components/shared/fade-in-content';
 import TextScramble from '@/components/shared/text-scramble';
 
@@ -14,7 +13,7 @@ function HowIWork({ delay }: { delay: number }) {
           </h2>
         </div>
       </FadeInContent>
-      <FadeInContent delay={delay + 850}>
+      <FadeInContent delay={delay + 450}>
         <p>
           I view coding as a creative effort and a way of bringing ideas to life.
           I enjoy creating something that is beautiful to use and a pleasure to maintain.

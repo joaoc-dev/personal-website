@@ -1,5 +1,4 @@
 import { CircleSmall } from 'lucide-react';
-import React from 'react';
 import FadeInContent from '@/components/shared/fade-in-content';
 import TextScramble from '@/components/shared/text-scramble';
 
@@ -14,7 +13,7 @@ function AboutMe({ delay }: { delay: number }) {
           </h2>
         </div>
       </FadeInContent>
-      <FadeInContent delay={delay + 900}>
+      <FadeInContent delay={delay + 500}>
         <ul className="list-disc list-inside">
           <li>
             10 years in software development (from .NET WinForms to modern web
