@@ -13,7 +13,7 @@ function WhatIBuild({ delay }: { delay: number }) {
           </h2>
         </div>
       </FadeInContent>
-      <FadeInContent delay={delay + 1050}>
+      <FadeInContent delay={delay + 500}>
         <p className="mb-6">Full-stack applications with</p>
         <ul className="grid space-y-4 space-x-4 md:grid-cols-2 list-disc list-inside">
           <li>
