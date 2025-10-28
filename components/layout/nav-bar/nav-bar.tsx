@@ -1,5 +1,4 @@
 import { Github, Presentation } from 'lucide-react';
-import React from 'react';
 import { ThemeToggle } from '../../theme/theme-toggle';
 import NavLink from './nav-link';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import FadeInContent from '@/components/shared/fade-in-content';
 
 function Introduction({ delay }: { delay: number }) {
