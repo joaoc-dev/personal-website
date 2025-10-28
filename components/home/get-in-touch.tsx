@@ -1,6 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
 import FadeInContent from '@/components/shared/fade-in-content';
 
 function GetInTouch({ delay }: { delay: number }) {

@@ -1,5 +1,4 @@
 import { CircleSmall } from 'lucide-react';
-import React from 'react';
 import FadeInContent from '@/components/shared/fade-in-content';
 import TextScramble from '@/components/shared/text-scramble';
 
